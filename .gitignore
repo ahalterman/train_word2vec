@@ -1,0 +1,5 @@
+*.txt
+*.model
+*.bz2
+*.npy
+*.pyc
