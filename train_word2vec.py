@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# Taken in large part from https://radimrehurek.com/gensim/models/word2vec.html
 import logging
 import os.path
 import sys
@@ -26,9 +27,11 @@ if __name__ == '__main__':
         sys.exit(1)
     inp, outp = sys.argv[1:3]
 
-    bigram = Phrases.load("wiki_ar_bigram.model")
+    bigram = Phrases.load(sys.argv[3]
+    # e.g., "wiki_ar_bigram.model"
  
-    model = Word2Vec(bigram[LineSentence(inp)], size=400, window=5, min_count=5, workers=multiprocessing.cpu_count())
+    model = Word2Vec(bigram[LineSentence(inp)], size=400, window=5, 
+            min_count=5, workers=multiprocessing.cpu_count())
  
     # trim unneeded model memory = use (much) less RAM
     model.init_sims(replace=True)
