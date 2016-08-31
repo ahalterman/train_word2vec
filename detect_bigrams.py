@@ -5,7 +5,6 @@ import os.path
 import sys
 import multiprocessing
  
-from gensim.corpora import  WikiCorpus
 from gensim.models import Phrases
 from gensim.models.word2vec import LineSentence
  

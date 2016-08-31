@@ -37,4 +37,3 @@ python train_word2vec.py arabic_wiki.txt wiki_ar_word2vec.model wiki_ar_bigram.m
 
 The parameters for word2vec are hardcoded into `train_word2vec.py`. Change them
 in the source code.
-
